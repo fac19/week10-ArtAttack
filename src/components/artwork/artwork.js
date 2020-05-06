@@ -1,3 +1,5 @@
+import handleArtwork from "./handleartwork";
+
 const checkRes = (res) => {
   if (res.status !== 200) {
     console.log(`Error with the request! ${res.status}`);
@@ -7,10 +9,11 @@ const checkRes = (res) => {
 };
 
 export const displayArtwork = (artwork) => {
-  return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/
-    `)
+  return fetch(handleArtwork)
     .then(checkRes)
     .catch((err) => {
       throw new Error(`fetch displayArtwork failed ${err}`);
     });
 };
+
+export displayArtwork;
