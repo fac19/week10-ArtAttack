@@ -1,15 +1,31 @@
 import React from "react";
 
 const Timer = () => {
-  const [counter, setCounter] = React.useState(30000);
+  const [counter, setCounter] = React.useState(30);
 
   React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 10);
+    const refresh = () => {
+      return counter !== 0 ? console.log(counter) : window.location.reload();
+    };
+
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
+
+  function refreshPage() {
+    window.location.reload();
+  }
+
+  // const [count, setCount] = React.useState(0);
+  React.useEffect(() => {
+    setTimeout(() => {
+      refreshPage();
+    }, 30000);
+  });
 
   return (
     <div className="timer-container">
-      <div>00:{counter}</div>
+      <p className="timer-text">Remaining {counter} seconds</p>
+      <button onClick={refreshPage}>Show me a different artwork</button>
     </div>
   );
 };
