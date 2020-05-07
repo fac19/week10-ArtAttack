@@ -4,11 +4,11 @@ const Timer = () => {
   const [counter, setCounter] = React.useState(30000);
 
   React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 10);
   }, [counter]);
 
   return (
-    <div className="container-timer">
+    <div className="timer-container">
       <div>00:{counter}</div>
     </div>
   );

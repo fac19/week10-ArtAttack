@@ -3,19 +3,13 @@ import React from "react";
 const Canvas = () => {
   const canvasRef = React.useRef(null);
   React.useEffect(() => {
-    console.log("hello");
-    // if (!canvasRef.current) {
-    //   return;
-    // }
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-    const rectangle = canvas.getBoundingClientRect();
 
     let isDrawing = false;
     let x = 0;
     let y = 0;
 
-    console.log(canvas);
     canvas.addEventListener("mousedown", (e) => {
       x = e.offsetX;
       y = e.offsetY;
@@ -23,6 +17,7 @@ const Canvas = () => {
     });
 
     function drawLine(context, x1, y1, x2, y2) {
+      if (!isDrawing) return;
       context.beginPath();
       context.strokeStyle = "black";
       context.lineWidth = 1;
@@ -34,28 +29,19 @@ const Canvas = () => {
 
     canvas.addEventListener("mousemove", (e) => {
       if (isDrawing === true) {
-        // console.log(e.clientX - rectangle.left);
         drawLine(context, x, y, e.offsetX, e.offsetY);
-        // drawLine(context, x, y, e.offsetX, e.offsetY);
         x = e.offsetX;
         y = e.offsetY;
-        console.log(e.offsetX);
       }
     });
 
-    window.addEventListener("mouseup", (e) => {
-      if (isDrawing === true) {
-        drawLine(context, x, y, e.offsetX, e.offsetY);
-        x = 0;
-        y = 0;
-        isDrawing = false;
-      }
+    window.addEventListener("mouseup", () => {
+      isDrawing = false;
     });
   });
 
   return <canvas ref={canvasRef} className="display-canvas"></canvas>;
 };
-
 export default Canvas;
 
 // THIS IS ANOTHER STRUCTURE which we didn't quite make it work at the end
