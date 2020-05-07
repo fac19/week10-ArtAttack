@@ -47,7 +47,8 @@ const handleArtwork = () => {
     435683,
     437052,
   ];
-  let index = Math.floor(Math.random() * arr.length);
+
+  const index = Math.floor(Math.random() * arr.length);
 
   return fetch(
     `https://collectionapi.metmuseum.org/public/collection/v1/objects/${arr[index]}`
