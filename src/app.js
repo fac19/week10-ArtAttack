@@ -3,7 +3,7 @@ import React from "react";
 import handleArtwork from "./components/artwork/handleartwork";
 import Display from "./components/artwork/displayartwork";
 import Canvas from "./components/canvas/canvas";
-// import Timer from ".components/timer/timer";
+import Timer from "./components/timer/timer";
 
 function App() {
   React.useEffect(() => {
