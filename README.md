@@ -6,6 +6,8 @@
 Build a fun, educational app for art lovers and children alike. Tell the difference between your Monets and Michaelangos, and we're not talking about the Teenage Ninja Mutant Turtles!
 
 This was loosely inspired by the hit 90s TV programme.
+
+
 ![image alt](https://66.media.tumblr.com/tumblr_lrbc5lcTJn1qaxo2mo2_250.gifv)
 
 ## User stories
