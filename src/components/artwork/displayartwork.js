@@ -1,27 +1,6 @@
 import handleArtwork from "./handleartwork";
 import React from "react";
 
-// const checkRes = (res) => {
-//   if (res.status !== 200) {
-//     console.log(`Error with the request! ${res.status}`);
-//     return;
-//   }
-//   return res.json();
-// };
-
-// const DisplayArtwork = (artwork) => {
-//   return fetch(handleArtwork)
-//     .then(checkRes)
-//     .then((artwork) => console.log(artwork))
-//     .catch((err) => {
-//       throw new Error(`fetch displayArtwork failed ${err}`);
-//     });
-// };
-
-// export default DisplayArtwork;
-
-// this 'props' parameter not being used.. am I doing something wrong?
-// maybe we don't need it.
 const Display = () => {
   const [artwork, setArtwork] = React.useState(0);
 

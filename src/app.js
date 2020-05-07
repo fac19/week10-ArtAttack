@@ -9,11 +9,15 @@ function App() {
   React.useEffect(() => {
     handleArtwork();
   }, []);
-  // const [artwork, setArtwork] = useState(0);
+
   return (
-    <>
-      <Display /> <Canvas /> <Timer />
-    </>
+    <div className="app">
+      <Timer />
+      <section className="app-container-artwork-canvas">
+        <Display className="app-display-artwork" />
+        <Canvas className="app-display-canvas" />
+      </section>
+    </div>
   );
 }
 
