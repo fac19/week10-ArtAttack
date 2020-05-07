@@ -1,5 +1,5 @@
 import handleArtwork from "./handleartwork";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // const checkRes = (res) => {
 //   if (res.status !== 200) {
@@ -22,10 +22,8 @@ import React, { useState, useEffect } from "react";
 
 // this 'props' parameter not being used.. am I doing something wrong?
 // maybe we don't need it.
-const Display = (props) => {
-  // What's the difference between react.useState vs useState?
-  // useState('') instead of useState(0)? both worked.
-  const [artwork, setArtwork] = useState(0);
+const Display = () => {
+  const [artwork, setArtwork] = React.useState(0);
 
   React.useEffect(() => {
     handleArtwork().then((artwork) => setArtwork(artwork));
