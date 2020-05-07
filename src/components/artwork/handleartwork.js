@@ -9,26 +9,23 @@ const checkResponse = (response) => {
 const handleArtwork = () => {
   // The reason why we fetch through an array of specific objectIDs is because there are more than 475,000 'objects' in total, and it significantly slows down (something). Also there were objects which don't have image property.
   let arr = [
+    437658,
     438011,
     435580,
     436957,
-    436723,
+    436532,
     437581,
-    438011,
-    25656,
-    78141,
-    78060,
-    53219,
-    208222,
     436532,
     459112,
-    11234,
+    435875,
     438815,
     459106,
-    435875,
     435885,
-    435683,
-    437052,
+    782304,
+    459121,
+    436947,
+    436965,
+    438136,
   ];
 
   const index = Math.floor(Math.random() * arr.length);
