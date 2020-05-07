@@ -1,10 +1,10 @@
 import React from "react";
 
 const Timer = () => {
-  const [counter, setCounter] = React.useState(30000);
+  const [counter, setCounter] = React.useState(30);
 
   React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 10);
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
 
   return (
