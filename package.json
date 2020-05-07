@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "jest-canvas-mock": "^2.2.0",
     "nock": "^12.0.3"
   }
 }
