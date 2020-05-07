@@ -1,18 +1,20 @@
-// import React from "react";
+import React from "react";
 
-// const Timer = () => {
-//   React.useEffect(() => {
-//     console.log("I am the timer");
-//     setInterval(popUp, 30000);
-//     function popUp() {
-//       alert("Time's up! Let's see if you're close to what's on the left");
-//     }
-//   });
+const Timer = () => {
+  const [counter, setCounter] = React.useState(30000);
 
-//   return <div>Timer</div>;
-// };
+  React.useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+  }, [counter]);
 
-// export default Timer;
+  return (
+    <div className="container-timer">
+      <div>00:{counter}</div>
+    </div>
+  );
+};
+
+export default Timer;
 
 //Page refreshes once the time is up
 //The background colour of the refresh button changes

@@ -34,29 +34,18 @@ const Canvas = () => {
 
     canvas.addEventListener("mousemove", (e) => {
       if (isDrawing === true) {
-        console.log(e.clientX - rectangle.left);
-        drawLine(
-          context,
-          x,
-          y,
-          e.clientX - rectangle.left,
-          e.clientY - rectangle.top
-        );
+        // console.log(e.clientX - rectangle.left);
+        drawLine(context, x, y, e.offsetX, e.offsetY);
         // drawLine(context, x, y, e.offsetX, e.offsetY);
         x = e.offsetX;
-        y = e.offset;
+        y = e.offsetY;
+        console.log(e.offsetX);
       }
     });
 
     window.addEventListener("mouseup", (e) => {
       if (isDrawing === true) {
-        drawLine(
-          context,
-          x,
-          y,
-          e.clientX - rectangle.left,
-          e.clientY - rectangle.top
-        );
+        drawLine(context, x, y, e.offsetX, e.offsetY);
         x = 0;
         y = 0;
         isDrawing = false;

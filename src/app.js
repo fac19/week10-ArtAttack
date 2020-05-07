@@ -12,7 +12,7 @@ function App() {
   // const [artwork, setArtwork] = useState(0);
   return (
     <>
-      <Display /> <Canvas />
+      <Display /> <Canvas /> <Timer />
     </>
   );
 }
