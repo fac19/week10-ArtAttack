@@ -15,6 +15,13 @@ const Timer = () => {
     window.location.reload();
   }
 
+  // const [count, setCount] = React.useState(0);
+  React.useEffect(() => {
+    setTimeout(() => {
+      refreshPage();
+    }, 30000);
+  });
+
   return (
     <div className="timer-container">
       <p className="timer-text">Remaining {counter} seconds</p>

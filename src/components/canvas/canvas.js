@@ -9,6 +9,7 @@ const Canvas = () => {
     let isDrawing = false;
     let x = 0;
     let y = 0;
+    let hue = 0;
 
     canvas.addEventListener("mousedown", (e) => {
       x = e.offsetX;
@@ -16,16 +17,20 @@ const Canvas = () => {
       isDrawing = true;
     });
 
-    function drawLine(context, x1, y1, x2, y2) {
+    function drawLine(drawing, x1, y1, x2, y2) {
       if (!isDrawing) return;
-      context.beginPath();
-      context.strokeStyle = "#002fa7";
-      context.lineWidth = 5;
-      context.lineCap = "round";
-      context.moveTo(x1, y1);
-      context.lineTo(x2, y2);
-      context.stroke();
-      context.closePath();
+      drawing.strokeStyle = `hsl(${hue}, 80%, 50%)`;
+      drawing.beginPath();
+      // drawing.strokeStyle = "#002fa7";
+      drawing.lineWidth = 5;
+      drawing.lineCap = "round";
+      drawing.lineJoin = "round";
+      drawing.moveTo(x1, y1);
+      drawing.lineTo(x2, y2);
+      drawing.stroke();
+      drawing.closePath();
+      hue++;
+      console.log(hue);
     }
 
     canvas.addEventListener("mousemove", (e) => {
@@ -47,7 +52,7 @@ const Canvas = () => {
         ref={canvasRef}
         width={500}
         height={500}
-        className="display-canvas"
+        className="canvas-display"
       ></canvas>
     </div>
   );
