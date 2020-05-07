@@ -22,7 +22,7 @@ const Canvas = () => {
       drawing.strokeStyle = `hsl(${hue}, 80%, 50%)`;
       drawing.beginPath();
       // drawing.strokeStyle = "#002fa7";
-      drawing.lineWidth = 5;
+      drawing.lineWidth = 10;
       drawing.lineCap = "round";
       drawing.lineJoin = "round";
       drawing.moveTo(x1, y1);
@@ -50,10 +50,12 @@ const Canvas = () => {
     <div className="canvas-container">
       <canvas
         ref={canvasRef}
-        width={500}
-        height={500}
+        width={600}
+        height={600}
         className="canvas-display"
       ></canvas>
+
+      <p className="canvas-text">Can you beat the clock?</p>
     </div>
   );
 };

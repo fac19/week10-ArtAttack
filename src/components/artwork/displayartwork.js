@@ -18,14 +18,17 @@ const Display = () => {
   return (
     <div className="display-artwork-container">
       <img
-        width="50%"
+        width={600}
+        height={600}
         src={primaryImage}
         className="display-artwork"
         alt="artwork"
       />
-      <h2 className="display-title">{title}</h2>
-      <p className="display-artist">{artistDisplayName}</p>
-      <p className="display-medium">{medium}</p>
+      <section className="display-artworkInfo-container" max-width={600}>
+        <h2 className="display-title">{title}</h2>
+        <p className="display-artist">{artistDisplayName}</p>
+        <p className="display-medium">{medium}</p>
+      </section>
     </div>
   );
 };

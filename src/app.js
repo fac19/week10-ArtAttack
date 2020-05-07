@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>Art Attack!</h1>
       <Timer />
       <section className="app-container-artwork-canvas">
         <Display className="app-display-artwork" />
