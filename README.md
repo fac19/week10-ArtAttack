@@ -1,68 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Art attack 🎨
 
-## Available Scripts
+![bob-ross](https://media.giphy.com/media/AbPNdmgk6TJK/giphy.gif);
 
-In the project directory, you can run:
+## Project brief
+Build a fun, educational app for art lovers and children alike. Tell the difference between your Monets and Michaelangos, and we're not talking about the Teenage Ninja Mutant Turtles!
 
-### `npm start`
+This was loosely inspired by the hit 90s TV programme.
+![image alt](https://66.media.tumblr.com/tumblr_lrbc5lcTJn1qaxo2mo2_250.gifv)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## User stories
+* As someone short on time, I want to be able to practice my drawing skills, so I don't get rusty
+* As a parent, I want to give my child a creative outlet so they're able to develop their creativity and learn about art
+* As someone who doesn't know much about art, I want to develop an appreciation, so I can show off with my new found knowledge
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Created by
+* [Lizzy-j](https://github.com/Lizzy-j)
+* [itsina96](https://github.com/itsina96)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About the API
+This project uses the esteemed [Metropolitan Museum of Art API](https://metmuseum.github.io/) and this bad boy contains over 475,000 objects!😳
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instructions
 
-### `npm run eject`
+### Running the project locally
+1. Open your terminal and navigate to the folder where you would like to run the file
+2. Type `npm install` to install the packages associated with the project
+3. Then, enter `npm start` to run the project.
+4. Open http://localhost:3000 to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### How to run tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the tests, go to the terminal and enter ```npm test```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Acceptance criteria
+- [ ] Accept some user input (e.g. a username)
+- [x] Query an API (e.g. the Github API, or any other fun one)
+- [x] Populate the UI with API data
+- [x] Have some form of persistent state and interactivity, e.g.
+- [x] A hunger bar that decreases over time and is topped up when you feed them stars 
+- [ ] A button to add more users to your collection
+- [x] Have integration tests using React Testing Library
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Stretch goals
+- [x] Refresh button
+- [x] Page refreshes automatically after 30
+- [x] Implementing a rainbow pen (wooo!)
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+---
 
-### Analyzing the Bundle Size
+## What didn't go well
+* Reading the acceptance criteria at the last minute
+* Testing
+* Time management
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What went well
+* Passion for the project
+* Fetching the API
+* Making the React components
+* Working well as a team :)
