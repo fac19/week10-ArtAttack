@@ -4,8 +4,20 @@ import React from "react";
 const Display = () => {
   const [artwork, setArtwork] = React.useState(0);
 
+  // React.useEffect(() => {
+  //   handleArtwork().then((artwork) => setArtwork(artwork));
+  // }, []);
+
   React.useEffect(() => {
-    handleArtwork().then((artwork) => setArtwork(artwork));
+    handleArtwork().then((newArtwork) => {
+      if (newArtwork.primaryImage === artwork.primaryImage) {
+        console.log(newArtwork.primaryImage);
+        console.log(artwork.primaryImage);
+        // could refresh the page to get another artwork here
+        window.location.reload();
+      }
+      setArtwork(newArtwork);
+    });
   }, []);
 
   if (!artwork) {
