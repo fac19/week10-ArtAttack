@@ -24,7 +24,12 @@ const Timer = () => {
   return (
     <div className="timer-container">
       <p className="timer-text">Remaining {counter} seconds</p>
-      <button onClick={refreshPage}>Show me a different artwork 👀</button>
+      <button onClick={refreshPage}>
+        Show me a different artwork{" "}
+        <span role="img" aria-label="eyes">
+          👀
+        </span>
+      </button>
     </div>
   );
 };
