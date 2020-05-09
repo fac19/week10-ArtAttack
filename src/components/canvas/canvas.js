@@ -49,6 +49,7 @@ const Canvas = () => {
   return (
     <div className="canvas-container">
       <canvas
+        aria-label="canvas-for-drawing"
         ref={canvasRef}
         width={600}
         height={600}

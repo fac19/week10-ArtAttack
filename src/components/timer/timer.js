@@ -4,10 +4,6 @@ const Timer = () => {
   const [counter, setCounter] = React.useState(30);
 
   React.useEffect(() => {
-    const refresh = () => {
-      return counter !== 0 ? console.log(counter) : window.location.reload();
-    };
-
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
 
