@@ -55,8 +55,6 @@ const Canvas = () => {
         height={600}
         className="canvas-display"
       ></canvas>
-
-      <p className="canvas-text">Can you beat the clock?</p>
     </div>
   );
 };

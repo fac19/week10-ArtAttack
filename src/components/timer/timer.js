@@ -19,6 +19,10 @@ const Timer = () => {
 
   return (
     <div className="timer-container">
+      <p className="timer-instruction">
+        Channel your inner picasso and draw along the artworks. The question
+        is.. can you beat the clock?
+      </p>
       <p className="timer-text">Remaining {counter} seconds</p>
       <button onClick={refreshPage}>
         Show me a different artwork{" "}
