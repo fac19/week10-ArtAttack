@@ -1,6 +1,6 @@
 import React from "react";
 // import displayArtwork from "../components/artwork";
-import handleArtwork from "./components/artwork/handleartwork";
+import handleArtwork from "./utils/handleartwork";
 import Display from "./components/artwork/displayartwork";
 import Canvas from "./components/canvas/canvas";
 import Timer from "./components/timer/timer";

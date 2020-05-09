@@ -1,4 +1,4 @@
-import handleArtwork from "./handleartwork";
+import handleArtwork from "../../utils/handleartwork";
 import React, { useEffect, useState } from "react";
 
 const Display = () => {
