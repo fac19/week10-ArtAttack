@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Timer = () => {
-  const [counter, setCounter] = React.useState(30);
+  const [counter, setCounter] = useState(30);
 
-  React.useEffect(() => {
+  useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
 
@@ -11,7 +11,7 @@ const Timer = () => {
     window.location.reload();
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       refreshPage();
     }, 30000);

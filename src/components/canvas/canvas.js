@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const Canvas = () => {
-  const canvasRef = React.useRef(null);
-  React.useEffect(() => {
+  const canvasRef = useRef(null);
+  useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 

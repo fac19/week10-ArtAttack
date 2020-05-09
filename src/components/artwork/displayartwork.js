@@ -1,14 +1,14 @@
 import handleArtwork from "./handleartwork";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Display = () => {
-  const [artwork, setArtwork] = React.useState(0);
+  const [artwork, setArtwork] = useState(0);
 
   // React.useEffect(() => {
   //   handleArtwork().then((artwork) => setArtwork(artwork));
   // }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     handleArtwork().then((newArtwork) => {
       if (newArtwork.primaryImage === artwork.primaryImage) {
         console.log(newArtwork.primaryImage);
