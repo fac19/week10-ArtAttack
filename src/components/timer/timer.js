@@ -4,10 +4,6 @@ const Timer = () => {
   const [counter, setCounter] = React.useState(30);
 
   React.useEffect(() => {
-    const refresh = () => {
-      return counter !== 0 ? console.log(counter) : window.location.reload();
-    };
-
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
 
@@ -23,6 +19,10 @@ const Timer = () => {
 
   return (
     <div className="timer-container">
+      <p className="timer-instruction">
+        Channel your inner picasso and draw along the artworks. The question
+        is.. can you beat the clock?
+      </p>
       <p className="timer-text">Remaining {counter} seconds</p>
       <button onClick={refreshPage}>
         Show me a different artwork{" "}

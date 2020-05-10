@@ -34,7 +34,7 @@ const Display = () => {
         height={600}
         src={primaryImage}
         className="display-artwork"
-        alt="artwork"
+        alt={title}
       />
       <section className="display-artworkInfo-container" max-width={600}>
         <h2 className="display-title">{title}</h2>
